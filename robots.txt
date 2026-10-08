@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zaxweir.com/sitemap.xml
