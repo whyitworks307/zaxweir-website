@@ -6,3 +6,20 @@
 
 /* Reflow long product names and headings when visitors enlarge text. */
 h1,h2,h3,.panel-word{overflow-wrap:anywhere}.detail-heading{flex-wrap:wrap}.panel-top>span{max-width:100%;overflow-wrap:anywhere}.header-inner,.detail-grid>div{min-width:0}
+
+/* Artwork and presentation apply exclusively to the 404 page. */
+.error-page{background:#030915}
+.error-page .header{position:absolute;inset:0 0 auto;z-index:2;background:transparent;border:0}
+.error-page .brand{font-weight:500;letter-spacing:.28em}
+.error-main{position:relative;isolation:isolate;background:linear-gradient(180deg,#02071226,transparent 25%,#0207121a),url("404-space.webp") center/cover no-repeat;overflow:hidden}
+.error-scene{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:100svh;padding-block:140px 160px}
+.error-code{font-size:clamp(7rem,16vw,15rem);font-weight:700;letter-spacing:-.035em;line-height:1.05;margin:0 0 12px;padding-inline:12px;color:#83cfff;background:linear-gradient(140deg,#bcfaff 8%,#168cff 43%,#6659ff 65%,#e5b0ff 90%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 2px #c5f8ff) drop-shadow(0 0 20px #168cff8c) drop-shadow(12px 10px 26px #a255ff66)}
+.error-scene h1{font-size:clamp(1.9rem,3vw,2.6rem);margin-bottom:18px;font-weight:500;letter-spacing:-.02em;text-shadow:0 2px 16px #020712}
+.error-description{max-width:680px;margin-bottom:34px;color:#c2d2e7;text-shadow:0 2px 10px #020712}
+.error-home{position:relative;min-width:240px;min-height:58px;padding:14px 28px;border:2px solid transparent;border-radius:999px;background:linear-gradient(110deg,#063276,#251057) padding-box,linear-gradient(110deg,#36e4ff,#5475ff,#d48fff) border-box;color:#fff;box-shadow:-7px 0 24px #008cff70,7px 0 24px #a64fff70,inset 0 0 18px #2847ee60;transition:box-shadow .2s,transform .2s}
+.error-home:after{content:"";width:10px;height:10px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg);margin-left:28px}
+.error-home:hover{color:#fff;background:linear-gradient(110deg,#104999,#381879) padding-box,linear-gradient(110deg,#8df0ff,#7b95ff,#e0aeff) border-box;box-shadow:-7px 0 30px #008cff90,7px 0 30px #a64fff90}
+.error-home:focus-visible{outline:3px solid #fff;outline-offset:7px}
+.error-page .footer{background:#030915}
+@media(max-width:700px){.error-main{background-image:linear-gradient(180deg,#02071226,transparent 25%,#0207121a),url("404-space-mobile.webp");background-position:center;background-size:cover}.error-scene{min-height:100svh;padding-block:120px 130px}.error-code{font-size:clamp(7rem,30vw,12rem);margin-bottom:20px}.error-description{font-size:1rem;max-width:34rem}.error-home{min-width:220px;min-height:56px}.error-page .mobile-menu nav{background:#071221}}
+@media(forced-colors:active){.error-code{background:none;-webkit-text-fill-color:CanvasText;filter:none}.error-home{border:2px solid ButtonText}}
