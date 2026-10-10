@@ -280,3 +280,8 @@
 .info-page .contact-email-panel{border-radius:9px}
 .info-page .info-contact-end{padding-bottom:54px}
 }
+
+
+/* On the About page, keep the approved homepage's cinematic horizon visible behind the text and concept card. */
+.info-page.about-page .about-hero{background-image:linear-gradient(90deg,#020912ed 0%,#020912c4 29%,#02091242 68%,#02091216 100%),url("home-hero.webp");background-position:center 50%;background-size:cover}
+@media(max-width:760px){.info-page.about-page .about-hero{background-image:linear-gradient(90deg,#020912d9,#020912a8 58%,#02091252),url("home-hero-mobile.webp");background-position:65% center}}
