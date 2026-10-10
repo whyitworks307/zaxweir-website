@@ -66,7 +66,7 @@ const base = process.env.SITE_URL || 'http://127.0.0.1:8009';
     assert(await page.locator('[data-permission="tasks"]').isChecked());
     assert(!(await page.locator('[data-permission="apps"]').isChecked()));
     await expectText('#console-task [data-selected-assistant]','ChatGPT');
-    for(const width of [320,390,768,1051,1280,1440,1920]){
+    for(const width of [320,390,768,1024,1051,1280,1440,1920]){
       await page.setViewportSize({width,height:900});
       for(const panel of ['overview','connections','permissions','task','activity']){
         await tab(panel).click();
@@ -87,6 +87,6 @@ const base = process.env.SITE_URL || 'http://127.0.0.1:8009';
     assert.equal(await staticPage.locator('.console-panel:visible').count(),5);
     assert(await staticPage.locator('[data-command="request"]').isDisabled());
     await nojs.close();
-    console.log('PASS assistant synchronization, keyboard tabs, approval/denial, blocked permissions, approval invalidation, reset, all panels at 7 widths, 200% text, reduced motion, no-JS fallback, no external calls, no console errors.');
+    console.log('PASS assistant synchronization, keyboard tabs, approval/denial, blocked permissions, approval invalidation, reset, all panels at 8 widths, 200% text, reduced motion, no-JS fallback, no external calls, no console errors.');
   } finally {await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});
