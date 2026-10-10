@@ -179,3 +179,104 @@
 @media(max-width:370px){.info-page .wrap{width:calc(100% - 32px)}.info-actions{display:grid}.info-actions .info-button{width:100%}.info-concept-flow{flex-wrap:wrap;justify-content:flex-start;gap:9px}.contact-email-panel{padding:23px 17px}.contact-safety{padding-inline:14px}}
 @media(prefers-reduced-motion:reduce){.info-page .info-button,.info-page .info-top-cta{transition:none}}
 @media(forced-colors:active){.info-hero h1 em{background:none;-webkit-text-fill-color:CanvasText}.info-product-concept,.info-bottom-cta,.contact-email-panel,.info-values-grid article,.info-contact-cards article{border:1px solid CanvasText}}
+
+
+/* Homepage consistency pass, scoped to About & Contact. Approved Home, ORVARDEN, 404 are untouched. */
+.info-page{background:#030b15;color:#f3f6fb;--info-cyan:#6fddf6;--info-violet:#ab8af0;--info-muted:#c4cedc;--info-line:#203d56}
+.info-page .wrap{width:min(1400px,calc(100% - 96px))}
+.info-page .header{background:#030b15;border-bottom:1px solid #163452;padding:8px 0}
+.info-page .header-inner{width:calc(100% - 64px);max-width:1480px;min-height:56px;padding:8px 24px;gap:24px;border:1px solid #385980;border-radius:16px;background:linear-gradient(110deg,#0b1b2b,#021321 50%,#101429);box-shadow:inset 0 0 14px #346daa30,0 0 20px #0463ba18}
+.info-page .brand{letter-spacing:.2em;font-weight:650}
+.info-page .desktop-nav{gap:34px}.info-page .desktop-nav a{padding-block:10px;color:#c9d3e2}.info-page .desktop-nav a[aria-current]:after{background:#48d9ff;box-shadow:0 0 10px #46b5ed}
+.info-page .info-top-cta{border-radius:999px;border:1px solid #abd8ff;background:linear-gradient(110deg,#0576ef,#4b25c6 70%,#9133e6);box-shadow:0 0 8px #19b8ff,0 0 20px #6247ff60,inset 0 0 12px #bf88ff60;color:#fff;min-height:38px;padding:8px 18px;font-size:.8rem}
+.info-page .info-top-cta:hover{color:#fff;filter:brightness(1.15);background:linear-gradient(110deg,#087ffc,#5932d3,#a03cf0)}
+.info-page .info-button{min-height:46px;border-radius:10px;color:#fff;white-space:normal}
+.info-page .info-button-primary{border:1px solid #abd8ff;background:linear-gradient(110deg,#0576ef,#4b25c6 70%,#9133e6);box-shadow:0 0 8px #19b8ff,0 0 20px #6247ff60,inset 0 0 12px #bf88ff60}
+.info-page .info-button-primary:hover{background:linear-gradient(110deg,#168afa,#674ce1,#9a42eb);filter:brightness(1.08);color:#fff}
+.info-page .info-button-outline{border:1px solid #6c86d7;background:#04101be6;box-shadow:inset 0 0 0 1px #36d8ff20}
+.info-page .info-button-outline:hover{border-color:#9fb1ef;color:#fff;background:#102445}
+.info-page .info-hero{background:linear-gradient(90deg,#020912f5 0%,#020912df 26%,#0209128a 53%,#03091530 88%),url("home-hero.webp") center 48%/cover no-repeat;border-bottom:1px solid #203047}
+.info-page .info-hero:after{content:none}
+.info-page .info-hero-grid,.info-page .contact-hero .contact-hero-grid{min-height:460px;align-items:center;grid-template-columns:minmax(0,1.4fr) minmax(300px,.65fr);gap:60px;padding-block:52px}
+.info-page .info-hero h1{font-size:clamp(2.8rem,4.4vw,4.6rem);font-weight:650;letter-spacing:-.035em;line-height:1.05;margin:0 0 22px;max-width:690px}
+.info-page .info-hero h1 em{background:linear-gradient(100deg,#1ecdf4 5%,#77a3ff 45%,#b579ec 90%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.info-page .info-kicker{color:#b8a4e5;font-size:.75rem;letter-spacing:.22em;margin-bottom:15px}
+.info-page .info-kicker-dot{background:#6ebeff;box-shadow:0 0 10px #5eb9ef77}
+.info-page .info-lead{max-width:590px;font-size:1.075rem;line-height:1.6;color:#d0d8e4}
+.info-page .info-actions{margin-top:26px;gap:18px}
+.info-page .info-hero-aside{border-color:#31577b;background:linear-gradient(145deg,#031021dc,#101b33b8);box-shadow:inset 0 0 0 2px #122b4b65,0 12px 38px #0009;backdrop-filter:blur(4px)}
+.info-page .info-aside-statement{font-size:clamp(1.35rem,2.2vw,2.15rem);margin:28px 0 22px}
+.info-page .info-aside-statement strong{color:#a5c2ff}
+.info-page .info-aside-track i{background:linear-gradient(90deg,#29cbf7,#8c5fff)}
+.info-page .info-hero-bottom{padding:16px 0 18px;border-color:#36506b7a}
+.info-page .info-section-index{color:#bcb6e0}.info-page .info-section-index span:first-child{color:#75d3f1}
+.info-page .info-story{padding-block:82px 91px}
+.info-page .info-story h2{font-size:clamp(2rem,3.3vw,3.4rem);font-weight:600;letter-spacing:-.04em}
+.info-page .info-story h2 em{color:#83b5ff}
+.info-page .info-product-band{background:linear-gradient(90deg,#020a14f4 0%,#020a14e5 27%,#020a148b 60%,#020a1435 100%),url("home-bridge.webp") center 55%/cover no-repeat;border-top:1px solid #295270;border-bottom:1px solid #295270}
+.info-page .info-product-band:before{content:none}
+.info-page .info-product-band-grid{grid-template-columns:205px minmax(0,1.1fr) minmax(265px,.75fr);padding-block:72px}
+.info-page .info-product-intro h2{font-size:clamp(2.4rem,3.8vw,3.8rem);color:#f6f6fa}
+.info-page .info-band-slogan strong{color:#b795f4}
+.info-page .info-product-intro>p:not(.info-band-eyebrow,.info-band-slogan){color:#d0d8e4}
+.info-page .info-product-concept{background:linear-gradient(150deg,#071b33e8,#171432d9);border:1px solid #557dab;box-shadow:inset 0 0 0 2px #102f5c30,0 0 25px #2459df24}
+.info-page .info-concept-flow strong{background:#153d65;border:1px solid #7aaff3}
+.info-page .info-text-link{color:#82e4ff;border-bottom-color:#82e4ff}
+.info-page .info-principles{padding-block:74px 77px}
+.info-page .info-values-grid article{background:linear-gradient(145deg,#0b1b2c,#08111e);border:1px solid #2b4e69;border-radius:8px;box-shadow:none}
+.info-page .info-values-grid h3{color:#f0f4f8}
+.info-page .info-value-number{color:#65c9ff;margin-bottom:30px}
+.info-page .info-bottom-cta{background:linear-gradient(90deg,#0b1c32,#17204b);border:1px solid #3b6495;box-shadow:inset 0 0 10px #283b7d22}
+.info-page .footer{background:#030b15;border-color:#192f45}
+.info-page .info-footer-inner{display:flex;align-items:center;flex-wrap:wrap;gap:24px;padding-block:20px}
+.info-page .info-footer-inner .brand{font-size:1rem}
+.info-page .info-footer-inner p{font-size:.85rem;color:#bcc8da;margin:0;padding-left:24px;border-left:1px solid #2c3d55}
+.info-page .info-footer-inner nav{display:flex;gap:24px;margin-left:auto;flex-wrap:wrap;font-size:.85rem}
+.info-page .info-footer-inner nav a{min-height:44px;display:inline-flex;align-items:center}
+.info-page .info-footer-inner small{font-size:.75rem;color:#b0bfd2}
+.info-page .contact-hero-aside{border-left-color:#759fff99;background:linear-gradient(90deg,#03112150,#03112120);padding:25px 0 25px 28px}
+.info-page .contact-hero-aside p{font-size:.98rem;color:#d0d8e4}
+.info-page .contact-aside-top,.info-page .contact-aside-bottom{color:#9dc5fb}
+.info-page .info-contact-main{padding-block:74px 75px}
+.info-page .contact-email-panel{border:1px solid #456a98;border-radius:10px;background:linear-gradient(140deg,#071d37,#101d3c 62%,#1d1b4e);box-shadow:inset 0 0 0 2px #1e417452,0 12px 42px #0006}
+.info-page .contact-email-panel:before{background:linear-gradient(90deg,#22cfff,#8d75f3,transparent)}
+.info-page .contact-email-address{color:#8bdfff}
+.info-page .contact-email-panel .info-button{border-radius:10px}
+.info-page .info-contact-cards article{border-color:#295270;border-radius:7px;background:linear-gradient(135deg,#0b1b2d,#0c1732)}
+.info-page .contact-safety{border-color:#2b5070;background:#081d2f}
+.info-page .info-contact-end{padding-bottom:72px}
+@media(max-width:1100px){
+.info-page .wrap{width:calc(100% - 48px)}
+.info-page .header-inner{width:calc(100% - 32px);padding-inline:18px;gap:16px}
+.info-page .desktop-nav{gap:20px}
+.info-page .info-top-cta{display:none}
+.info-page .info-hero-grid,.info-page .contact-hero .contact-hero-grid{gap:24px}
+.info-page .info-product-band-grid{grid-template-columns:140px minmax(0,1fr) minmax(250px,.7fr);gap:24px}
+}
+@media(max-width:760px){
+.info-page .wrap{width:calc(100% - 40px)}
+.info-page .header-inner{width:calc(100% - 24px);min-height:58px;padding:6px 14px;border-radius:12px}
+.info-page .brand{font-size:.9rem;letter-spacing:.14em}
+.info-page .mobile-menu nav{top:calc(100% + 8px);background:#071727}
+.info-page .info-hero{background-image:linear-gradient(90deg,#020912ef,#020912bc 65%,#02091255),url("home-hero-mobile.webp");background-position:65% center}
+.info-page .info-hero-grid,.info-page .contact-hero .contact-hero-grid{min-height:0;padding-block:48px 58px}
+.info-page .info-hero h1{font-size:clamp(2.65rem,9vw,3.8rem);line-height:1.08;margin-bottom:21px}
+.info-page .info-lead{font-size:1rem;line-height:1.65}
+.info-page .info-actions{flex-direction:column;align-items:flex-start;gap:14px}
+.info-page .info-actions .info-button{min-height:48px;padding:12px 20px}
+.info-page .info-hero-aside{margin-top:36px}
+.info-page .info-story,.info-page .info-principles{padding-block:51px}
+.info-page .info-product-band{background-image:linear-gradient(180deg,#020a14f8 0%,#020a14ef 50%,#020a1470 90%),url("home-bridge-mobile.webp");background-position:65% bottom}
+.info-page .info-product-band-grid{padding-block:44px 168px}
+.info-page .info-product-concept{margin-top:29px}
+.info-page .info-bottom-cta{margin-bottom:30px}
+.info-page .info-footer-inner{gap:12px;padding-block:26px}
+.info-page .info-footer-inner p{border:0;padding-left:0;flex-basis:100%}
+.info-page .info-footer-inner nav{gap:20px;flex-basis:100%;margin-left:0}
+.info-page .info-footer-inner small{flex-basis:100%}
+.info-page .contact-hero-aside{background:#0715258e;margin-top:36px}
+.info-page .contact-hero{background-position:75% center}
+.info-page .info-contact-main{padding-block:53px}
+.info-page .contact-email-panel{border-radius:9px}
+.info-page .info-contact-end{padding-bottom:54px}
+}
