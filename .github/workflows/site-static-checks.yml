@@ -1,0 +1,25 @@
+name: Website static checks
+
+on:
+  pull_request:
+    paths:
+      - '*.html'
+      - 'assets/**'
+      - 'CNAME'
+      - 'robots.txt'
+      - 'sitemap.xml'
+      - 'tests/**'
+      - '.github/workflows/site-static-checks.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate site without third-party packages
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
