@@ -8,7 +8,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://zaxweir.com"
-PAGES = {"index.html", "products.html", "about.html", "contact.html", "privacy.html"}
+PAGES = {"index.html", "products.html", "security.html", "about.html", "contact.html", "privacy.html"}
 
 
 class Inspect(HTMLParser):
