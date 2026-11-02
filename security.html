@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security Tools | ZAXWEIR</title>
+<meta name="description" content="Meet the ZAXWEIR Agent Security Toolkit, an open-source security testing project in development. Learn about its scope and release status.">
+<meta name="theme-color" content="#071221">
+<link rel="canonical" href="https://zaxweir.com/security.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="ZAXWEIR">
+<meta property="og:title" content="Security Tools | ZAXWEIR">
+<meta property="og:description" content="Security testing for AI agents. The ZAXWEIR Agent Security Toolkit is in development; public release is in preparation.">
+<meta property="og:url" content="https://zaxweir.com/security.html">
+<meta property="og:image" content="https://zaxweir.com/assets/zaxweir-og.png">
+<meta property="og:image:alt" content="ZAXWEIR — Technology takes your lead.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Security Tools | ZAXWEIR">
+<meta name="twitter:description" content="Explore the ZAXWEIR Agent Security Toolkit and its public release status.">
+<meta name="twitter:image" content="https://zaxweir.com/assets/zaxweir-og.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23071221%22%2F%3E%3Cpath%20d%3D%22M8%209h16L8%2023h16%22%20fill%3D%22none%22%20stroke%3D%22%2379e2ec%22%20stroke-width%3D%223%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E">
+<link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/info.css"><link rel="stylesheet" href="assets/security.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body class="info-page security-page">
+<a class="skip" href="#main">Skip to content</a>
+<header class="header"><div class="wrap header-inner">
+<a class="brand" href="/" aria-label="ZAXWEIR home">ZAXWEIR</a>
+<nav class="desktop-nav" aria-label="Main"><a href="/">Home</a><a href="/products.html">Products</a><a href="/security.html" aria-current="page">Security</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
+<a class="info-top-cta" href="#release-status">Release status <span aria-hidden="true">↗</span></a>
+<details class="mobile-menu"><summary>Menu<span aria-hidden="true" class="menu-lines"></span></summary><nav aria-label="Mobile"><a href="/">Home</a><a href="/products.html">Products</a><a href="/security.html" aria-current="page">Security</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav></details>
+</div></header>
+<main id="main" tabindex="-1">
+<section class="security-hero" aria-labelledby="security-title"><div class="wrap security-hero-grid">
+<div class="security-hero-copy">
+<p class="info-kicker"><span class="info-kicker-dot" aria-hidden="true"></span> ZAXWEIR <span class="info-divider" aria-hidden="true">/</span> SECURITY RESEARCH</p>
+<h1 id="security-title">Security needs to be <em>tested, not assumed.</em></h1>
+<p class="security-lead">We're building the ZAXWEIR Agent Security Toolkit to help examine what AI-powered tools can access, what they can change, and what happens when something goes wrong.</p>
+<p class="security-status"><span class="security-status-dot" aria-hidden="true"></span> Open-source project · Public release in preparation</p>
+<div class="security-hero-actions"><a class="info-button info-button-primary" href="#release-status">Check release status <span aria-hidden="true">↗</span></a><a class="info-button info-button-outline" href="#what-we-test">What we're testing</a></div>
+</div>
+<div class="security-visual" role="group" aria-label="Illustrative testing flow; not a live product demonstration">
+<div class="security-visual-top"><span>SECURITY / TEST WORKFLOW</span><span>CONCEPT PREVIEW</span></div>
+<div class="security-visual-core" aria-hidden="true">
+<div class="security-visual-node"><span>01 / REQUEST</span><strong>Agent action</strong><small>What is being asked?</small></div>
+<div class="security-visual-connector"><span></span><span></span><span></span></div>
+<div class="security-visual-node security-visual-node-focus"><span>02 / BOUNDARY</span><strong>Permission check</strong><small>What is actually allowed?</small></div>
+<div class="security-visual-connector"><span></span><span></span><span></span></div>
+<div class="security-visual-node"><span>03 / EVIDENCE</span><strong>Observed result</strong><small>What can be verified?</small></div>
+</div>
+<div class="security-visual-foot"><span>TEST THE FAILURE PATH</span><span>NOT A SECURITY CERTIFICATION</span></div>
+</div>
+</div><div class="wrap security-hero-bottom"><span>TESTABLE BOUNDARIES</span><span>DOCUMENTED LIMITATIONS</span><span>INDEPENDENT REVIEW</span></div>
+</section>
+<section class="wrap security-overview" id="what-we-test" aria-labelledby="test-title">
+<div class="info-section-index"><span>01</span><span>THE WORK</span></div>
+<div class="security-overview-body"><h2 id="test-title">Make the boundaries visible.</h2><p class="security-section-lead">An AI agent can request an action. That doesn't mean the action should be trusted. The toolkit explores ways to test the boundary between a request, an authorized operation, and a result that can be checked.</p>
+<div class="security-areas">
+<article><div class="security-area-icon" aria-hidden="true">01 <span>↗</span></div><h3>Access &amp; permissions</h3><p>Challenge file-access boundaries, unexpected paths, and operations that should be denied.</p></article>
+<article><div class="security-area-icon" aria-hidden="true">02 <span>↗</span></div><h3>Failure &amp; recovery</h3><p>Exercise interruptions, uncertain outcomes, and situations where retrying could be unsafe.</p></article>
+<article><div class="security-area-icon" aria-hidden="true">03 <span>↗</span></div><h3>Evidence &amp; verification</h3><p>Check whether recorded events support the claimed result—and where audit assumptions break down.</p></article>
+</div>
+</div></section>
+<section class="security-principle-band" aria-labelledby="principle-title"><div class="wrap security-principle-inner">
+<div class="info-section-index"><span>02</span><span>OUR APPROACH</span></div>
+<div><p class="security-band-kicker">NO SHORTCUT TO TRUST</p><h2 id="principle-title">A passing test is a starting point.<br><em>Not a promise.</em></h2><p>We document what a test actually covers, where the evidence stops, and what still needs independent review. A prototype is not a sandbox, and research results are not a guarantee of protection.</p></div>
+</div></section>
+<section class="wrap security-release" id="release-status" aria-labelledby="release-title"><div class="info-section-index"><span>03</span><span>PUBLIC RELEASE</span></div>
+<div class="security-release-body"><div class="security-release-heading"><div><p class="security-band-kicker">RELEASE IN PREPARATION</p><h2 id="release-title">Not available to download yet.</h2></div><span class="security-release-pill">INDEPENDENT REVIEW PENDING</span></div>
+<p>Our current development candidate has builder-side testing evidence, but we have not confirmed independent acceptance for a public toolkit release. We're keeping downloads offline until that review and the public source package are complete.</p>
+<div class="security-release-checks" aria-label="Public release checklist">
+<div><span aria-hidden="true">01</span><strong>Review the candidate</strong><small>Independent security and functional checks</small></div>
+<div><span aria-hidden="true">02</span><strong>Prepare the public source</strong><small>License, dependencies, and sensitive-data review</small></div>
+<div><span aria-hidden="true">03</span><strong>Publish a verifiable release</strong><small>GitHub source, versioned files, checksums, and limitations</small></div>
+</div>
+<p class="security-release-note">There is no installer or public release linked here yet. This page covers the standalone security-testing effort, not private ZAXWEIR Relay source code.</p>
+</div></section>
+<section class="wrap security-contact" aria-labelledby="security-contact-title"><div><p class="info-kicker"><span class="info-kicker-dot" aria-hidden="true"></span> A DIRECT CONVERSATION</p><h2 id="security-contact-title">Working on agent safety?</h2><p>Questions about the research, testing approach, or future source release? Reach the founder directly.</p></div><a class="info-button info-button-primary" href="/contact.html">Contact ZAXWEIR <span aria-hidden="true">↗</span></a></section>
+</main>
+<footer class="footer"><div class="wrap info-footer-inner"><a class="brand" href="/" aria-label="ZAXWEIR home">ZAXWEIR</a><p>Technology takes your lead.</p><nav aria-label="Footer"><a href="/">Home</a><a href="/products.html">Products</a><a href="/security.html" aria-current="page">Security</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a></nav><small>© 2026 ZAXWEIR</small></div></footer>
+</body></html>

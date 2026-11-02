@@ -8,7 +8,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://zaxweir.com"
-PAGES = {"index.html", "products.html", "about.html", "contact.html", "privacy.html"}
+PAGES = {"index.html", "products.html", "security.html", "about.html", "contact.html", "privacy.html"}
 
 
 class Inspect(HTMLParser):
@@ -120,6 +120,18 @@ class StaticSiteTests(unittest.TestCase):
                     target = resolve(css, uri)
                     self.assertIsNotNone(target, "Remote CSS asset: %s" % uri)
                     self.assertTrue(target.is_file(), "Missing CSS asset %s" % uri)
+
+    def test_security_navigation_and_release_scope(self):
+        for name in sorted(PAGES | {"404.html"}):
+            page = self.pages[name]
+            with self.subTest(page=name):
+                security_links = [uri for tag, uri in page.links
+                                  if tag == "a" and uri in ("/security.html", "security.html")]
+                self.assertGreaterEqual(len(security_links), 2, "Security should appear in navigation")
+        html = (ROOT / "security.html").read_text(encoding="utf-8")
+        self.assertIn("Not available to download yet.", html)
+        self.assertIn("INDEPENDENT REVIEW PENDING", html)
+        self.assertNotRegex(html, r'(?i)<a\b[^>]*href=["\x27][^"\x27]*(?:\.zip|\.exe|/releases/download/)')
 
     def test_sitemap_robots(self):
         root = ET.parse(ROOT / "sitemap.xml").getroot()
