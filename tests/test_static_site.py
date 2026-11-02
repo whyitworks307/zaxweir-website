@@ -122,7 +122,8 @@ class StaticSiteTests(unittest.TestCase):
                     self.assertTrue(target.is_file(), "Missing CSS asset %s" % uri)
 
     def test_security_navigation_and_release_scope(self):
-        for name, page in self.pages.items():
+        for name in sorted(PAGES | {"404.html"}):
+            page = self.pages[name]
             with self.subTest(page=name):
                 security_links = [uri for tag, uri in page.links
                                   if tag == "a" and uri in ("/security.html", "security.html")]
