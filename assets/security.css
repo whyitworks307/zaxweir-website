@@ -1,0 +1,93 @@
+/* Security research page. Uses shared ZAXWEIR layout, palette, and typography. */
+.security-page{background:#030b15}
+.security-page .desktop-nav{gap:26px}
+.security-hero{isolation:isolate;position:relative;border-bottom:1px solid #28435d;background:linear-gradient(90deg,#030c18 0%,#041123f4 44%,#071229d9 100%),url("home-bridge.webp") 60% 45%/cover no-repeat}
+.security-hero-grid{display:grid;grid-template-columns:minmax(0,1.14fr) minmax(330px,.86fr);align-items:center;gap:60px;padding-block:100px 98px}
+.security-page .security-hero h1{max-width:760px;font-size:clamp(3.3rem,5.3vw,5.5rem);line-height:1.04;letter-spacing:-.06em;font-weight:680;margin:0 0 25px;color:#fff;text-wrap:balance}
+.security-hero h1 em,.security-principle-band h2 em{background:linear-gradient(95deg,#26d3f6 8%,#7ba1ff 52%,#c291f3 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.security-lead{font-size:clamp(1.08rem,1.6vw,1.22rem);line-height:1.75;max-width:620px;color:#d1e0f1;margin-bottom:26px}
+.security-status{display:flex;align-items:center;gap:11px;color:#c8d9ea;font-size:.81rem;font-weight:550;margin:0}
+.security-status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#76dff2;box-shadow:0 0 10px #4fe5fb7d;flex-shrink:0}
+.security-hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.security-visual{min-width:0;background:linear-gradient(145deg,#091b31f5,#101a36f2);border:1px solid #4e6a96;border-radius:15px;box-shadow:0 24px 70px #0008,inset 0 1px 0 #ffffff20;overflow:hidden}
+.security-visual-top,.security-visual-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 24px;color:#bad0e5;font-size:.63rem;line-height:1.5;letter-spacing:.14em;font-weight:650}
+.security-visual-top{border-bottom:1px solid #35516b}.security-visual-top span:last-child{color:#9bdeea}
+.security-visual-foot{border-top:1px solid #35516b;font-size:.59rem;color:#a7bdd2}
+.security-visual-core{display:flex;flex-direction:column;align-items:center;padding:23px 30px}
+.security-visual-node{width:100%;max-width:365px;border:1px solid #3c5775;background:#081a2c;padding:15px 20px;border-radius:9px;display:grid;gap:4px}
+.security-visual-node span{color:#81dced;font-size:.62rem;font-weight:650;letter-spacing:.15em}
+.security-visual-node strong{color:#f6f8ff;font-size:1.08rem;letter-spacing:-.02em;font-weight:620}
+.security-visual-node small{color:#a7bfd3;font-size:.78rem;line-height:1.55}
+.security-visual-node-focus{border-color:#7796c9;background:linear-gradient(110deg,#09243c,#171d47);box-shadow:inset 0 1px 0 #9bf0ff18,0 0 20px #506ee81a}
+.security-visual-connector{display:flex;flex-direction:column;align-items:center;justify-content:space-around;height:31px}
+.security-visual-connector span{height:4px;width:1px;background:#5da7da}
+.security-hero-bottom{display:flex;justify-content:space-between;gap:25px;padding-block:18px;color:#a7bdd0;font-size:.66rem;letter-spacing:.17em;font-weight:600}
+.security-overview{display:grid;grid-template-columns:190px minmax(0,1fr);gap:65px;padding-block:105px 113px}
+.security-overview h2,.security-release h2{font-size:clamp(2.4rem,3.7vw,3.6rem);letter-spacing:-.055em;font-weight:660;margin:0 0 24px}
+.security-section-lead{font-size:1.12rem;line-height:1.75;max-width:830px;color:#bacee1;margin-bottom:45px}
+.security-areas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.security-areas article{border:1px solid #37516a;border-radius:12px;background:linear-gradient(160deg,#0b2037,#0a1728);min-height:268px;padding:26px 23px;display:flex;flex-direction:column}
+.security-area-icon{display:flex;justify-content:space-between;align-items:center;color:#8bdaf3;font-size:.75rem;letter-spacing:.14em;border-bottom:1px solid #3a526b;padding-bottom:18px;margin-bottom:29px}
+.security-area-icon span{font-size:1.2rem}
+.security-areas h3{font-size:1.21rem;letter-spacing:-.02em;margin:0 0 13px}
+.security-areas p{color:#b8cadd;font-size:.93rem;line-height:1.7;margin:0}
+.security-principle-band{border-block:1px solid #324763;background:linear-gradient(100deg,#050e1eeb,#061326dc 60%,#080e22e8),url("home-bridge.webp") center/cover no-repeat}
+.security-principle-inner{display:grid;grid-template-columns:190px minmax(0,1fr);gap:65px;padding-block:95px 97px}
+.security-band-kicker{font-size:.72rem;font-weight:670;letter-spacing:.17em;color:#a7afff;margin-bottom:18px}
+.security-principle-band h2{font-size:clamp(2.5rem,4.4vw,4.2rem);line-height:1.14;letter-spacing:-.055em;margin:0 0 27px}
+.security-principle-band p:last-child{max-width:800px;color:#c1d1e4;line-height:1.78;margin-bottom:0}
+.security-release{display:grid;grid-template-columns:190px minmax(0,1fr);gap:65px;padding-block:107px 100px}
+.security-release-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.security-release-pill{display:inline-flex;align-items:center;border:1px solid #7d8da4;background:#152237;border-radius:99px;padding:8px 13px;color:#d7e2ec;font-size:.67rem;font-weight:660;letter-spacing:.08em;line-height:1.4;margin-bottom:28px}
+.security-release-body>p{max-width:855px;color:#bdcedf;line-height:1.78}
+.security-release-checks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-block:33px 31px}
+.security-release-checks>div{display:grid;gap:10px;align-content:start;border-top:1px solid #57728d;padding:20px 15px 8px 0}
+.security-release-checks span{font-size:.76rem;letter-spacing:.13em;color:#83d8ef;font-weight:650}
+.security-release-checks strong{font-size:1rem;color:#f4f6fd;line-height:1.35}
+.security-release-checks small{color:#aebfd3;font-size:.82rem;line-height:1.6}
+.security-release .security-release-note{border-left:2px solid #7c9ae2;background:#0e1c30;padding:15px 20px;font-size:.86rem;line-height:1.7;margin:10px 0 0}
+.security-contact{display:flex;align-items:center;justify-content:space-between;gap:35px;background:linear-gradient(110deg,#0a2138,#111d3b);border:1px solid #3f5b79;border-radius:14px;margin-bottom:92px;padding:38px 45px}
+.security-contact h2{font-size:clamp(1.85rem,2.9vw,2.55rem);margin:0 0 12px}
+.security-contact p:last-child{color:#bbccde;line-height:1.7;margin:0;max-width:620px}
+.security-contact .info-button{flex-shrink:0}
+@media(max-width:1200px){
+.security-hero-grid{gap:30px;grid-template-columns:minmax(0,1fr) minmax(300px,.85fr)}
+.security-overview,.security-principle-inner,.security-release{grid-template-columns:135px minmax(0,1fr);gap:35px}
+.security-page .desktop-nav{gap:18px}
+}
+@media(max-width:850px){
+.security-hero-grid{grid-template-columns:1fr;gap:38px;padding-block:74px}
+.security-visual{max-width:650px}
+.security-areas{grid-template-columns:1fr}
+.security-areas article{min-height:0}
+.security-release-checks{grid-template-columns:1fr}
+.security-release-checks>div{grid-template-columns:48px 1fr;gap:4px 16px}
+.security-release-checks small{grid-column:2}
+}
+@media(max-width:700px){
+.security-page .security-hero-grid{display:block;padding-block:56px 44px}
+.security-page .security-hero h1{font-size:clamp(2.7rem,10vw,3.9rem);margin-bottom:22px}
+.security-lead{font-size:1rem}
+.security-visual{margin-top:38px}
+.security-visual-top,.security-visual-foot{padding:16px;font-size:.54rem}
+.security-visual-core{padding:18px}
+.security-hero-bottom{justify-content:flex-start;flex-wrap:wrap;gap:11px 18px;font-size:.56rem;letter-spacing:.1em}
+.security-overview,.security-principle-inner,.security-release{display:block;padding-block:65px}
+.security-overview .info-section-index,.security-principle-inner .info-section-index,.security-release .info-section-index{margin-bottom:30px}
+.security-overview h2,.security-release h2{font-size:clamp(2.3rem,8vw,3rem)}
+.security-section-lead{font-size:1rem;margin-bottom:32px}
+.security-principle-band h2{font-size:clamp(2.2rem,8.5vw,3.2rem)}
+.security-release-pill{margin-bottom:14px}
+.security-contact{display:block;padding:30px 24px;margin-bottom:65px}
+.security-contact .info-button{margin-top:27px}
+}
+@media(max-width:380px){
+.security-hero-actions{display:grid}
+.security-hero-actions .info-button{width:100%}
+.security-release-checks>div{grid-template-columns:1fr}
+.security-release-checks small{grid-column:1}
+}
+@media(forced-colors:active){
+.security-page h1 em,.security-principle-band h2 em{background:none;-webkit-text-fill-color:CanvasText}
+.security-visual,.security-areas article,.security-release-pill,.security-contact{border:1px solid CanvasText}
+}
