@@ -144,9 +144,11 @@ class StaticSiteTests(unittest.TestCase):
                                   if tag == "a" and uri in ("/security.html", "security.html")]
                 self.assertGreaterEqual(len(security_links), 2, "Security should appear in navigation")
         html = (ROOT / "security.html").read_text(encoding="utf-8")
-        self.assertIn("Not available to download yet.", html)
-        self.assertIn("INDEPENDENT REVIEW PENDING", html)
-        self.assertNotRegex(html, r'(?i)<a\b[^>]*href=["\x27][^"\x27]*(?:\.zip|\.exe|/releases/download/)')
+        # The public security page now advertises the released Toolkit RC8.
+        self.assertIn("v0.5.0rc8 public pre-release available", html)
+        self.assertIn("not a production sandbox or security certification", html)
+        self.assertIn("https://github.com/whyitworks307/zaxweir-agent-security-toolkit/releases/download/v0.5.0rc8/zaxweir-agent-security-toolkit-0.5.0rc8-source.zip", html)
+        self.assertNotIn('href="/downloads/', html)
 
     def test_sitemap_robots(self):
         root = ET.parse(ROOT / "sitemap.xml").getroot()
