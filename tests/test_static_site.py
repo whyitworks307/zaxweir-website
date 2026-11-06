@@ -121,6 +121,21 @@ class StaticSiteTests(unittest.TestCase):
                     self.assertIsNotNone(target, "Remote CSS asset: %s" % uri)
                     self.assertTrue(target.is_file(), "Missing CSS asset %s" % uri)
 
+    def test_optional_analytics_is_explicit_and_fail_closed(self):
+        js = (ROOT / "assets/site.js").read_text(encoding="utf-8")
+        privacy = (ROOT / "privacy.html").read_text(encoding="utf-8")
+        token = re.search(r"const CLOUDFLARE_WEB_ANALYTICS_TOKEN = '([^']*)';", js)
+        self.assertIsNotNone(token, "Analytics activation must remain explicit")
+        self.assertTrue(token.group(1) == "" or re.fullmatch(r"[a-fA-F0-9]{32}", token.group(1)))
+        self.assertIn("if (!/^[a-f0-9]{32}$/i.test(CLOUDFLARE_WEB_ANALYTICS_TOKEN)) return;", js)
+        self.assertIn("['zaxweir.com', 'www.zaxweir.com'].includes(window.location.hostname)", js)
+        self.assertIn("https://static.cloudflareinsights.com/beacon.min.js", js)
+        analytics = js.split("// Optional Cloudflare Web Analytics:", 1)[1]
+        self.assertNotIn("localStorage", analytics)
+        self.assertNotIn("document.cookie", analytics)
+        self.assertIn("Cloudflare Web Analytics", privacy)
+        self.assertIn("not loaded until this analytics feature is configured", privacy)
+
     def test_security_navigation_and_release_scope(self):
         for name in sorted(PAGES | {"404.html"}):
             page = self.pages[name]
