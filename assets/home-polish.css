@@ -1,0 +1,182 @@
+/* ZAXWEIR homepage premium craft PROTOTYPE — 2026-10-13.
+   Safe and scoped. Existing logo, slogan, hero art, content and other pages remain intact.
+   Owner review required before publishing. */
+.home-page{
+  --zx-polish-cyan:#48d9ff;
+  --zx-polish-blue:#5f9df5;
+  --zx-polish-violet:#a38ff8;
+  --zx-polish-line:rgba(111,166,211,.25);
+}
+/* A deliberate editorial rhythm beneath the original cinematic hero. */
+.home-page .home-values{
+  position:relative;
+  gap:0;
+  padding-block:38px 42px;
+  isolation:isolate;
+}
+.home-page .home-values::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent 0%,rgba(75,210,251,.50) 15%,rgba(132,120,236,.48) 50%,transparent 100%);
+  pointer-events:none;
+}
+.home-page .home-values article,
+.home-page .home-values article+article,
+.home-page .home-values article:nth-child(even),
+.home-page .home-values article:nth-child(3){
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+  min-width:0;
+  min-height:142px;
+  padding:18px 21px 16px 23px;
+  border:0;
+  border-left:1px solid var(--zx-polish-line);
+  background:linear-gradient(135deg,rgba(24,62,106,.075),rgba(0,0,0,0) 76%);
+}
+.home-page .home-values article:first-child{padding-left:0;border-left:0;background:none}
+.home-page .home-values article:last-child{padding-right:0}
+.home-page .home-values svg{
+  flex:0 0 43px;
+  width:43px;height:43px;
+  box-sizing:border-box;
+  padding:9px;
+  margin:0;
+  background:linear-gradient(135deg,rgba(16,65,110,.40),rgba(25,32,72,.35));
+  border:1px solid rgba(102,167,218,.37);
+  border-radius:10px;
+  stroke-width:2.2;
+  filter:drop-shadow(0 0 6px rgba(47,152,230,.16));
+}
+.home-page .home-values .home-bars{
+  padding:10px;
+  fill:#66cfff;
+  stroke:none;
+}
+.home-page .home-values h2{
+  margin:1px 0 10px;
+  font-size:1.07rem;
+  line-height:1.34;
+  letter-spacing:-.018em;
+  font-weight:640;
+  color:#f2f7ff;
+}
+.home-page .home-values p{
+  margin:0;
+  max-width:270px;
+  color:#c5d2e2;
+  font-size:.91rem;
+  line-height:1.63;
+}
+/* Refine the *existing* ORVARDEN introduction without replacing its art or layout. */
+.home-page .home-orvarden{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border-radius:12px;
+  border-color:#37688d;
+  box-shadow:inset 0 0 0 1px rgba(88,179,230,.14),0 17px 48px rgba(0,7,19,.38);
+}
+.home-page .home-orvarden::before{
+  content:"";
+  position:absolute;left:0;right:0;top:0;height:2px;
+  background:linear-gradient(90deg,rgba(93,215,252,.75) 0%,rgba(150,132,241,.40) 30%,transparent 71%);
+  pointer-events:none;
+}
+.home-page .home-orvarden-copy{position:relative;z-index:1}
+.home-page .home-orvarden .eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  color:#ddc0f4;
+  font-size:.74rem;
+  font-weight:640;
+  letter-spacing:.17em;
+  line-height:1.45;
+  margin-bottom:17px;
+}
+.home-page .home-orvarden .eyebrow::before{
+  content:"";
+  width:6px;height:6px;flex:0 0 6px;
+  border-radius:50%;
+  background:#a88afb;
+  box-shadow:0 0 10px rgba(139,106,228,.48);
+}
+.home-page .home-orvarden h2{
+  font-weight:640;
+  font-size:clamp(1.8rem,2.6vw,2.65rem);
+  letter-spacing:-.04em;
+  margin-bottom:17px;
+}
+.home-page .home-orvarden h2 span{
+  font-size:.54em;
+  letter-spacing:-.01em;
+  vertical-align:middle;
+  color:#d1c5e5;
+}
+.home-page .home-orvarden-copy>p:not(.eyebrow){
+  max-width:520px;
+  color:#d4dfed;
+  line-height:1.66;
+  margin-bottom:12px;
+}
+.home-page .home-orvarden .button{
+  margin-top:14px;
+  min-height:46px;
+  border:1px solid #8193c2;
+  background:rgba(7,22,41,.82);
+  box-shadow:inset 0 1px 0 rgba(190,216,255,.13);
+  color:#d7efff;
+}
+.home-page .home-orvarden .button:hover{
+  border-color:#9fdcff;
+  color:#fff;
+}
+/* No animation adds layout shift or requires a GPU layer. */
+@media(max-width:1100px){
+  .home-page .home-values{gap:0}
+  .home-page .home-values article,
+  .home-page .home-values article+article,
+  .home-page .home-values article:nth-child(even),
+  .home-page .home-values article:nth-child(3){
+    min-height:132px;
+    padding:20px 24px;
+    border-left:1px solid var(--zx-polish-line);
+    border-top:1px solid var(--zx-polish-line);
+  }
+  .home-page .home-values article:nth-child(odd){
+    border-left:0;
+    padding-left:0;
+  }
+  .home-page .home-values article:nth-child(-n+2){border-top:0}
+}
+@media(max-width:600px){
+  .home-page .home-values{
+    grid-template-columns:1fr;
+    padding-block:24px 29px;
+  }
+  .home-page .home-values article,
+  .home-page .home-values article+article,
+  .home-page .home-values article:nth-child(even),
+  .home-page .home-values article:nth-child(3){
+    min-height:0;
+    display:flex;
+    gap:16px;
+    padding:18px 0 19px;
+    border-left:0;
+    border-top:1px solid var(--zx-polish-line);
+    background:transparent;
+  }
+  .home-page .home-values article:first-child{border-top:0}
+  .home-page .home-values svg{width:43px;height:43px;flex-basis:43px}
+  .home-page .home-values h2{font-size:1.05rem}
+  .home-page .home-values p{max-width:none;font-size:.94rem}
+  .home-page .home-orvarden{border-radius:10px}
+  .home-page .home-orvarden h2 span{display:block;margin-top:9px;line-height:1.4;font-size:.58em}
+  .home-page .home-orvarden-copy>p:not(.eyebrow){max-width:390px}
+}
+@media(prefers-reduced-motion:reduce){
+  .home-page .home-orvarden .button{transition:none}
+  .home-page .home-orvarden .button:hover{transform:none}
+}
